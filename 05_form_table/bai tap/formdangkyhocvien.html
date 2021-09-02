@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .input{
+         font-size:30px
+        }
+    </style>
+</head>
+<body>
+<form action="formdangkyhocvien.html" method="post" >
+    <table style="background: khaki; margin: auto; margin-top: 200px ">
+        <tr>
+            <th class="input" STYLE="background: aquamarine; color: blue " colspan="2">ĐĂNG KÝ HỌC VIÊN</th>
+        </tr>
+        <tr>
+            <td>
+                <label class="input" for="hoten" style="color:blue ">Họ và tên</label>
+            </td>
+            <td>
+                <input class="input" type="text" name="username" id="hoten">
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <label class="input" for="datebirth" style="color: blue ">Ngày sinh</label>
+            </td>
+            <td>
+                <input class="input" type="date" name="dateofbirth" id="datebirth">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="input" style="color:blue ">Giới tính</label>
+            </td>
+            <td>
+                <input class="input" type="radio" name="gender" value="male">Male
+                <input class="input" type="radio" name="gender" value="female">Female
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="input" for="diachi" style="color:blue ">Địa chỉ</label>
+            </td>
+            <td>
+                <textarea class="input" rows="4" cols="50" name="adress" id="diachi" "> </textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="input" style="color:blue ">Lớp</label>
+            </td>
+            <td>
+                <select class="input">
+                    <option value="lop1">Lớp 1</option>
+                    <option value="lop2">Lớp 2</option>
+                    <option value="lop3">Lớp 3</option>
+                </select>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="input" for="email" style="color:blue ">Email</label>
+            </td>
+            <td>
+                <input class="input" type="text" name="Email" id="email">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="input" for="sdt" style="color:blue ">Điện thoại</label>
+            </td>
+            <td>
+                <input class="input" type="number" name="telnum" id="sdt">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center">
+                <input class="input" type="submit" value="Đăng ký">
+                <input class="input" type="reset" value="Nhập lại">
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
