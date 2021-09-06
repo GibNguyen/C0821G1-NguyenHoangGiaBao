@@ -5,31 +5,45 @@
     <title>Title</title>
 </head>
 <body>
-    <form action="ungdungchuyendoitiente.html" method="get">
+
+
         <label>Amount:</label>
         <input type="text" id = amount>
         <label style="margin-left: 100px">From Currency:</label>
-        <select>
-            <option>VietNam</option>
-            <option>USD</option>
+        <select id ="from" >
+            <option value="VND">VietNam</option>
+            <option value="USD">USD</option>
         </select>
+
         <label style="margin-left: 150px">To Currency:</label>
-        <select>
-            <option>USD</option>
-            <option>VietNam</option>
+        <select id ="to" >
+            <option value="USD">USD</option>
+            <option value="VND">VietNam</option>
         </select>
-        <input type="button" onclick="doChange" value="Convert" style="margin-left: 100px">
+
+        <button onclick="doChange()">Chuyển đổi</button><br>
+        Kết quả : <h1 id = ketqua></h1>
         <script>
             function doChange(){
-                let amount1 = document.getElementById(amount).innerText;
-                const USD = 22.768
-                let ketqua = amount1*USD
-                document.write(ketqua+ "USD")
+                let amount = document.getElementById("amount").value;
+                let from = document.getElementById("from").value;
+                let to = document.getElementById("to").value;
+                let result ;
 
+                if ( from === "VND" && to === "USD" ){
+                    result = amount / 23000;
+                } else if ( from === "USD" && to === "VND"){
+                    result = amount * 23000;
+                } else {
+                    result = amount;
+                }
+                document.getElementById('ketqua').innerText =  result;
             }
+
         </script>
+
         
-    </form>
+
 
 </body>
 </html>
