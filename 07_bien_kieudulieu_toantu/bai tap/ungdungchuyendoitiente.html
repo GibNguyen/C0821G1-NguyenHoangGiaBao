@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="ungdungchuyendoitiente.html" method="get">
+        <label>Amount:</label>
+        <input type="text" id = amount>
+        <label style="margin-left: 100px">From Currency:</label>
+        <select>
+            <option>VietNam</option>
+            <option>USD</option>
+        </select>
+        <label style="margin-left: 150px">To Currency:</label>
+        <select>
+            <option>USD</option>
+            <option>VietNam</option>
+        </select>
+        <input type="button" onclick="doChange" value="Convert" style="margin-left: 100px">
+        <script>
+            function doChange(){
+                let amount1 = document.getElementById(amount).innerText;
+                const USD = 22.768
+                let ketqua = amount1*USD
+                document.write(ketqua+ "USD")
+
+            }
+        </script>
+        
+    </form>
+
+</body>
+</html>
