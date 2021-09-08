@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let weight;
+        let height;
+        weight = parseInt(prompt("Nhập cân nặng(kg)"));
+        height = parseFloat(prompt("Nhập chiều cao(m)"));
+        let bmi = weight / (height ^ 2);
+        if(bmi <=30){
+            if(bmi < 25){
+                if(bmi <18.5){
+                    document.write('Underweight')
+                }
+                else {
+                    document.write('Normal')
+                }
+            }
+            else {
+                document.write('Overweight')
+            }
+        }
+        else {
+            document.write('Obese')
+        }
+    </script>
+
+</body>
+</html>

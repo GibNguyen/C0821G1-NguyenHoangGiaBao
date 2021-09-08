@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nhập các tham số của phương trình ax<sup>2</sup> +bx +c</h1>
+<label>a=</label>
+<input type="text" id="a"><br>
+<label>b=</label>
+<input type="text" id="b"><br>
+<label>c=</label>
+<input type="text" id="c"><br>
+<button onclick="pt()">Kết quả</button>
+<p id="result"></p>
+<script>
+    function pt() {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        let c = parseFloat(document.getElementById("c").value);
+        let delta = b*b - 4*a*c;
+        let x ;
+        let x1;
+        let x2;
+        if(delta < 0){
+            document.getElementById('result').innerText="Phương trình vô nghiệm"
+        }
+        else if (delta === 0){
+            x= -b/(2*a);
+            document.getElementById('result').innerText="Phương trình có nghiệm kép là :" + x
+        }
+        else {
+            x1= (-b+ Math.sqrt(delta))/(2*a);
+            x2= (-b- Math.sqrt(delta))/(2*a);
+            document.getElementById('result').innerText="Phương trình có 2 nghiệm là:"+ x1 +' và' + x2
+
+
+        }
+    }
+</script>
+</body>
+</html>

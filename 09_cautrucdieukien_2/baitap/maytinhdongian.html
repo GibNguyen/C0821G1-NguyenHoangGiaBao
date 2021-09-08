@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1" cellpadding="10px">
+        <tr>
+            <td colspan="4" id="result"><input type="text" ></td>
+        </tr>
+        <tr>
+            <td onclick="calcu('7')">7</td>
+            <td onclick="calcu('8')">8</td>
+            <td onclick="calcu('9')">9</td>
+            <td onclick="calcu('+')">+</td>
+        </tr>
+        <tr>
+            <td onclick="calcu('4')">4</td>
+            <td onclick="calcu('5')">5</td>
+            <td onclick="calcu('6')">6</td>
+            <td onclick="calcu('-')">_</td>
+        </tr>
+        <tr>
+            <td onclick="calcu('1')">1</td>
+            <td onclick="calcu('2')">2</td>
+            <td onclick="calcu('3')">3</td>
+            <td onclick="calcu('+')">+</td>
+        </tr>
+        <tr>
+            <td onclick="reset()">C</td>
+            <td onclick="calcu('0')">0</td>
+            <td onclick="calcu('=')">=</td>
+            <td onclick="calcu('/')">/</td>
+        </tr>
+    </table>
+<script>
+    let number = '';
+
+    function calcu(keyboard) {
+        if (keyboard === '=') {
+            document.getElementById('result').innerText = eval(number);
+
+        } else {
+            number += keyboard;
+            document.getElementById('result').innerText = number;
+        }
+
+    }
+    function reset() {
+        number=''
+       document.getElementById('result').innerText = number
+
+    }
+
+
+
+</script>
+</body>
+</html>

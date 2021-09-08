@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let so = parseInt(prompt('Nhập danh số bán hàng(Triệu)'));
+    let hoahong;
+    if (so <=100){
+        hoahong = (so *5)/100;
+        document.write('Hoa hồng của bạn là :' + hoahong + ' Triệu')
+    }
+    else if (so<=300){
+        hoahong = (so *10)/100;
+        document.write('Hoa hồng của bạn là :' + hoahong + ' Triệu')
+    }
+    else {
+        hoahong = (so *20)/100;
+        document.write('Hoa hồng của bạn là:' + hoahong + " Triệu")
+    }
+</script>
+</body>
+</html>

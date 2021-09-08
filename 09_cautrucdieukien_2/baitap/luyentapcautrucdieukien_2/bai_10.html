@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Chỉ số mới(kW)</h1>
+    <input type="text" id="moi">
+    <h1>Chỉ số cũ(kW)</h1>
+    <input type="text" id="cu"><br>
+    <button onclick="thanhtoan()">Số tiền thanh toán</button>
+    <p id="kq"></p>
+<script>
+    function thanhtoan() {
+        let moi= parseInt(document.getElementById('moi').value)
+        let cu = parseInt(document.getElementById('cu').value)
+        let sochu= moi- cu;
+        let gia;
+        if (sochu<=50){
+            gia = sochu*230;
+            document.getElementById('kq').innerText=gia+' VND'
+        }
+        else if(sochu <=100){
+            gia = sochu*480;
+            document.getElementById('kq').innerText=gia+' VND'
+        }
+        else {
+            gia = sochu*700
+            document.getElementById('kq').innerText=gia+' VND'
+        }
+
+
+
+    }
+</script>
+</body>
+</html>

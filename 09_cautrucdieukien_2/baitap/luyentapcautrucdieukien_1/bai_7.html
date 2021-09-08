@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let time = parseFloat(prompt("Nhập số phút đã gọi"));
+        const PHI_TB = 25000;
+        let money;
+        if(time<=50){
+            money = PHI_TB+(600*time);
+            document.write('Số tiền phải trả là:'+ money);
+        }
+        else if(time<=100){
+            money = PHI_TB+(400*time);
+            document.write('Số tiền phải trả là:'+ money);
+        }
+            else {
+                money = PHI_TB+(200*time);
+                document.write('Số tiền phải trả là:'+ money);
+        }
+
+    </script>
+</body>
+</html>
