@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money = parseInt(prompt('Nhâp lương của bạn(Triệu)'));
+    let tax;
+    let r_money ;
+        if(money <7){
+            tax = 5*money/100;
+            r_money = money - tax;
+        }
+        else if (money <15){
+            tax = 10*money/100;
+            r_money = money - tax;
+        }
+        else {
+            tax = 20*money/100;
+            r_money = money - tax;
+        }
+        document.write('Thuế thu nhập của bạn là:' + tax+" Triệu")
+        document.write('<br>')
+        document.write('Lương ròng của bạn là:' + r_money+ " Triệu")
+</script>
+</body>
+</html>
