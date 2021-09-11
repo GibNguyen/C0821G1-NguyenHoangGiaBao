@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="play()">Chơi</button>
+<script>
+    function play()
+    {
+    let a= parseInt(prompt('Nhập vào số đầu khoảng bạn muốn chọn :'));
+    let b= parseInt(prompt('Nhập vào số cuối khoảng bạn muốn chọn :'));
+    let c= Math.floor(Math.random()*(b-a));
+
+        for(let i =1;i<=3;i++)
+        {
+            let d= parseInt(prompt('Nhập số bạn muốn đoán'))
+            if(d===c)
+            {
+                alert('Chúc mừng bạn đã đoán đúng');
+                break;
+            }
+        else if(d>c)
+            {
+                alert('Số của bạn lớn hơn số của tôi');
+            }
+        else
+            {
+                alert('Số của bạn nhỏ hơn số của tôi');
+            }
+        }
+
+    }
+</script>
+
+</body>
+</html>
