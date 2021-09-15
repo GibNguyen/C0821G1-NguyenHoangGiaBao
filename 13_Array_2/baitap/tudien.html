@@ -12,24 +12,23 @@
 <script>
     let english =['orange','apple','banana'];
     let vietnamese = ['cam','táo','chuối'];
-    let index;
-function trans()
-{
+function trans() {
+    let index = -1;
     let word = document.getElementById('nhap').value;
-    for(i=0;i<english.length;i++)
-    {
-        if(english[i]== word)
-        {
-            index=english.indexOf(word);
-            document.getElementById('result').innerHTML=vietnamese[index];
-            break;
-        }
-        else
-        {
-            document.getElementById('result').innerHTML="Không tìm thấy"
+    for (i = 0; i < english.length; i++) {
+
+        if (english[i] == word) {
+            index = i;
         }
     }
 
+    if (index == -1) {
+        document.getElementById('result').innerHTML = 'Không tìm thấy';
+    }
+    else
+    {
+        document.getElementById('result').innerHTML=vietnamese[index];
+    }
 }
 </script>
 </body>

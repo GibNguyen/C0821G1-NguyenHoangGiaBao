@@ -8,19 +8,33 @@
 <script>
     let n=parseInt(prompt('Nhập số phần tử trong mảng a'));
     let m=parseInt(prompt('Nhập số phần tử trong mảng b'));
-    let a=[n];
-    let b=[m];
+    let a=[];
+    let b=[];
+    let check=false;
     for(let i=0;i< n;i++)
     {
-        let value=parseInt(prompt("Nhập vào phần tử thứ"+ (i+1)+' mảng a'));
-        a[i]=value;
+       a[i]=parseInt(prompt("Nhập vào phần tử thứ"+ (i+1)+' mảng a'));
     }
-    for(let i=0;i< m;i++)
+    for(let j=0;j< m;j++)
     {
-        let value=parseInt(prompt("Nhập vào phần tử thứ"+ (i+1)+' mảng b'));
-        b[i]=value;
+        b[j]=parseInt(prompt("Nhập vào phần tử thứ"+ (j+1)+' mảng b'));
     }
-    
+    for(let i=0;i<a.length;i++)
+    {
+        for (let j = 0; j < b.length; j++)
+        {
+            if (b[j] == a[i])
+            {
+               check=true;
+               break;
+            }
+
+        }
+    }
+    if(check)
+    {
+        b.splice(j,1)
+    }
+    document.write(b)
 </script>
 </body>
-</html>
