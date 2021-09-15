@@ -12,6 +12,10 @@
     let a= parseInt(prompt('Nhập vào số đầu khoảng bạn muốn chọn :'));
     let b= parseInt(prompt('Nhập vào số cuối khoảng bạn muốn chọn :'));
     let c= Math.floor(Math.random()*(b-a));
+    while (c===0)
+    {
+        c= Math.floor(Math.random()*(b-a));
+    }
 
         for(let i =1;i<=3;i++)
         {

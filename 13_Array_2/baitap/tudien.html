@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nhập từ tiếng anh muốn tìm(orange,apple,banana)</h1>
+<input type="text" id = 'nhap'>
+<button onclick="trans()">Dịch</button><br>
+<p id="result">Kết Quả</p>
+<script>
+    let english =['orange','apple','banana'];
+    let vietnamese = ['cam','táo','chuối'];
+    let index;
+function trans()
+{
+    let word = document.getElementById('nhap').value;
+    for(i=0;i<english.length;i++)
+    {
+        if(english[i]== word)
+        {
+            index=english.indexOf(word);
+            document.getElementById('result').innerHTML=vietnamese[index];
+            break;
+        }
+        else
+        {
+            document.getElementById('result').innerHTML="Không tìm thấy"
+        }
+    }
+
+}
+</script>
+</body>
+</html>

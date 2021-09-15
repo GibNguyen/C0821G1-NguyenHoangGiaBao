@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n=parseInt(prompt('Nhập số phần tử trong mảng'))
+    let array=[n];
+    let sum=0;
+    let average =0;
+    for(let i=1;i<=n;i++)
+    {
+        let value=parseInt(prompt("Nhập vào phần tử thứ"+ i));
+        array[i]=value;
+
+    }
+    array.sort(function (a,b) {
+        return b-a;
+    });
+    alert('Phần tử lớn nhất trong mảng là:' + array[0])
+    for(let i=1;i<=n;i++)
+    {
+         sum = array[i]+sum;
+    }
+    average = sum/5;
+    document.write('Giá trị trung bình của các phần tử trong mảng là :'+ average);
+
+
+</script>
+</body>
+</html>

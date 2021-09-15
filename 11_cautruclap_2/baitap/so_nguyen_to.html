@@ -8,20 +8,26 @@
 <script>
     let number=prompt('Nhập vào số lượng số nguyên tố muốn in');
     let count =0;
+    let n=2;
 
-    for (let n = 2; count < number; n++) {
+    while (count<number)
+    {
         let check = true;
-        for (let i = 2; i < n; i++) {
-            if (n % i === 0) {
+        for (let i = 2; i < n; i++)
+        {
+            if (n % i === 0)
+            {
                 check = false;
                 break;
             }
         }
-        if (check === true) {
+        if (check === true)
+        {
             count = count + 1;
             document.write(n);
             document.write('<br>');
         }
+        n++;
     }
 </script>
 </body>

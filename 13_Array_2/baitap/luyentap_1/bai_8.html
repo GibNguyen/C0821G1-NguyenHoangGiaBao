@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array=[10];
+    for(let i=0;i<10;i++)
+    {
+        let value=parseInt(prompt('Nhập phần tử thứ' +(i+1)));
+        array[i] = value;
+    }
+    array.sort(function (a,b)
+    {
+        return b-a;
+    });
+
+    document.write(array.toString())
+</script>
+</body>
+</html>

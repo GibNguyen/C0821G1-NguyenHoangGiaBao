@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array= new Array(10);
+    for(let i=0;i<10;i++)
+    {
+        let value = parseInt(prompt('Nhập vào phần tử thứ ' + (i+1)));
+        array[i] = value;
+    }
+        let max = array[0];
+        let index = 0;
+    for(let i=1;i<=array.length;i++)
+    {
+        if (array[i] >= max)
+        {
+            index = i+1;
+            max=array[i];
+        }
+    }
+    document.write('Phần tử lớn nhất là '+max+' và nằm ở vị trí thứ '+index);
+
+
+</script>
+</body>
+</html>
