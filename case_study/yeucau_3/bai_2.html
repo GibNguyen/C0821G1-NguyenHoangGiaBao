@@ -10,7 +10,9 @@
     let m=parseInt(prompt('Nhập số phần tử trong mảng b'));
     let a=[];
     let b=[];
-    let check=false;
+    let c=[];
+    let check;
+    let check1;
     for(let i=0;i< n;i++)
     {
        a[i]=parseInt(prompt("Nhập vào phần tử thứ"+ (i+1)+' mảng a'));
@@ -27,14 +29,40 @@
             {
                check=true;
                break;
+w
+            }
+            else
+            {
+                check=false;
             }
 
         }
+        if(check==false)
+        {
+            c.push(a[i]);
+        }
     }
-    if(check)
+    for(let j=0;j<b.length;j++)
     {
-        b.splice(j,1)
+        for (let i = 0; i < a.length; i++)
+        {
+            if (b[j] == a[i])
+            {
+                check1=true;
+                break;
+            }
+            else
+            {
+                check1=false;
+            }
+
+        }
+        if(check1==false)
+        {
+            c.push(b[j]);
+        }
     }
-    document.write(b)
+
+   document.write(c)
 </script>
 </body>
