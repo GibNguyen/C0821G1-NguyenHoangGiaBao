@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(doC,doF,doKevin) {
+            this.doC=doC;
+            this.doF=doF;
+            this.doKevin=doKevin;
+        }
+        getC(){
+            return this.doC;
+        }
+        getF(){
+            return this.doF;
+        }
+        getK(){
+            return this.doKevin;
+        }
+        setC(doC){
+            this.doC = doC
+        }
+        setF(doF){
+            this.doF=doF
+        }
+        setK(doKevin){
+            this.doKevin=doKevin
+        }
+        hienthi(){
+            document.write('Độ C là '+this.doC)
+        }
+        doiCsangF(){
+            this.doF=this.doC*(9/5)+32;
+            document.write('Độ F là '+this.doF)
+        }
+        doiCsangKevin(){
+            this.doKevin=this.doC + 273.15;
+            document.write('Độ Kevin là '+this.doKevin)
+        }
+    }
+let temperature = new Temperature(0,0,0)
+    temperature.setC(25);
+    temperature.hienthi();
+    document.write('<br>')
+    temperature.doiCsangF();
+    document.write('<br>');
+    temperature.doiCsangKevin();
+</script>
+</body>
+</html>
