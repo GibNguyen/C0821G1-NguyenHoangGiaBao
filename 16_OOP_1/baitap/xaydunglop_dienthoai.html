@@ -6,16 +6,61 @@
 </head>
 <body>
 <script>
-class mobile
-{
-    constructor(pin,dangsoanthao,hopthuden,dagui) {
-        this.pin = pin;
-        this.dangsoanthao = dangsoanthao;
-        this.hopthuden = hopthuden;
-        this.dagui = dagui;
+    class Mobile {
+        constructor() {
+            this.pin = 100;
+            this.receivedMessage = [];
+            this.sentMessage = [];
+            this.status = true;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        setStatus() {
+            if (this.status) {
+                let check = confirm("Bạn có muốn tắt điện thoại không!");
+                if (check) {
+                    alert("Đã tắt điện thoại!");
+                    this.status = false;
+                }
+            } else {
+                alert("Đã bặt điện thoại!");
+                this.status = true;
+            }
+        }
+
+        sendMessage(sentMessage, iphone) {
+            this.sentMessage.push(sentMessage);
+            iphone.receiveMessage(sentMessage);
+            this.pin--;
+        }
+
+
+        receiveMessage(receivedMessage) {
+            this.receivedMessage.push(receivedMessage);
+            this.pin--;
+        }
+
+        checkPin(){
+            if (this.pin === 0){
+                alert("Sạc đê!")
+            }
+
+        }
     }
 
-}
+    let iphone = new Mobile();
+    let nokia = new Mobile();
+
+    nokia.sendMessage("Xin chào", iphone);
+
+    document.write("Tin đã gửi: " + nokia.sentMessage);
+    document.write('<br>');
+    document.write("Tin Đã nhận: " + iphone.receivedMessage);
+    document.write('<br>');
+    document.write("Lượng pin của Iphone còn: " + iphone.pin);
 </script>
 </body>
 </html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('Nhập số hàng cho ma trận'));
+    let m = parseInt(prompt('Nhập số cột cho ma trận'));
+    let array = Array(n);
+    for (let i=0;i<n;i++)
+    {
+        array[i]= new array[m];
+        for(let j=0;j<m;j++)
+        {
+            array[i][j] = parseInt(prompt('Nhập phần tử ở vị trí ' + i + j))
+        }
+        document.write('<br>')
+    }
+
+</script>
+</body>
+</html>

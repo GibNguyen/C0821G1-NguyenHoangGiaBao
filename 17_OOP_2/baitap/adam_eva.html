@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor() {
+            this.weight = 10;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(value) {
+            this.weight = value;
+        }
+        decrease(){
+            this.weight--;
+        }
+        kiemTra(){
+            document.write('Khối lượng của quả táo bây giờ là '+this.weight)
+        }
+    }
+    class Human{
+        constructor(name,gender,weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(value) {
+            this.name = value;
+        }
+
+        getGender() {
+            return this.gender;
+        }
+
+        setGender(value) {
+            this.gender = value;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(value) {
+            this.weight = value;
+        }
+        say(){
+            let a = prompt('Nhập vào màn hình chuyện muốn nói')
+            console.log(a);
+        }
+        eat(){
+            this.weight++;
+            apple1.decrease();
+            document.write('Táo đã bị ăn 1. Khối lượng của '+this.name+ ' bây giờ là '+this.weight)
+        }
+        kiemTratongquat(){
+            document.write('tên của đối tượng là '+this.name+' có giới tính là '+this.gender+' và có cân nặng là '+this.weight)
+        }
+    }
+    let human1 = new Human('John','Male',65);
+    let apple1 = new Apple();
+
+    human1.kiemTratongquat();
+    document.write('<br>');
+    human1.say();
+    human1.eat();
+    document.write('<br>');
+    apple1.kiemTra();
+</script>
+</body>
+</html>
