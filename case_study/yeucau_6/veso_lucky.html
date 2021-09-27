@@ -5,6 +5,154 @@
     <title>Title</title>
 </head>
 <body>
+<label>Số 1 </label><input type="text" id='num1' placeholder="0-99"><br>
+<label>Số 2 </label><input type="text" id='num2' placeholder="0-99"><br>
+<label>Số 3 </label><input type="text" id='num3' placeholder="0-99"><br>
+<label>Số 4 </label><input type="text" id='num4' placeholder="0-99"><br>
+<label>Số 5 </label><input type="text" id='num5' placeholder="0-99"><br>
+<label>Số 6 </label><input type="text" id='num6' placeholder="0-99"><br>
+<button onclick="random()">Tự chọn Vé Số</button>
+<button onclick="checkVeso()">Xem kết quả</button>
 
+<script>
+    let n = parseInt(prompt('Bạn có 2 lựa chọn:' + '\n' +
+        '1.Bạn muốn tự chọn số' + '\n' +
+        '2.Hệ thống tự random'));
+    let array=Array()
+    switch (n) {
+        case 2:  num1=Math.round(Math.random()*99);
+            document.getElementById('num1').value=num1;
+            num2=Math.round(Math.random()*99);
+            document.getElementById('num2').value=num2;
+            num3=Math.round(Math.random()*99);
+            document.getElementById('num3').value=num3;
+            num4=Math.round(Math.random()*99);
+            document.getElementById('num4').value=num4;
+            num5=Math.round(Math.random()*99);
+            document.getElementById('num5').value=num5;
+            num6=Math.round(Math.random()*99);
+            document.getElementById('num6').value=num6;
+    }
+    function random() {
+        num1=Math.round(Math.random()*99);
+        document.getElementById('num1').value=num1;
+        num2=Math.round(Math.random()*99);
+        document.getElementById('num2').value=num2;
+        num3=Math.round(Math.random()*99);
+        document.getElementById('num3').value=num3;
+        num4=Math.round(Math.random()*99);
+        document.getElementById('num4').value=num4;
+        num5=Math.round(Math.random()*99);
+        document.getElementById('num5').value=num5;
+        num6=Math.round(Math.random()*99);
+        document.getElementById('num6').value=num6;
+    }
+
+    function checkVeso() {
+        let num1 = parseInt(document.getElementById('num1').value);
+        let num2 = parseInt(document.getElementById('num2').value);
+        let num3 = parseInt(document.getElementById('num3').value);
+        let num4 = parseInt(document.getElementById('num4').value);
+        let num5 = parseInt(document.getElementById('num5').value);
+        let num6 = parseInt(document.getElementById('num6').value);
+        let VeSo = new ticket(num1, num2, num3, num4, num5, num6);
+        if (
+            VeSo.getNumber1() === VeHeThong.getNumber1() &&
+            VeSo.getNumber2() === VeHeThong.getNumber2() &&
+            VeSo.getNumber3() === VeHeThong.getNumber3() &&
+            VeSo.getNumber4() === VeHeThong.getNumber4() &&
+            VeSo.getNumber5() === VeHeThong.getNumber5() &&
+            VeSo.getNumber6() === VeHeThong.getNumber6()) {
+            alert('Chúc mừng bạn đã trúng giải nhất trị giá 50tr');
+        } else if (VeSo.getNumber2() === VeHeThong.getNumber2() &&
+            VeSo.getNumber3() === VeHeThong.getNumber3() &&
+            VeSo.getNumber4() === VeHeThong.getNumber4() &&
+            VeSo.getNumber5() === VeHeThong.getNumber5() &&
+            VeSo.getNumber6() === VeHeThong.getNumber6()) {
+            alert('Chúc mừng bạn đã trúng giải nhì trị giá 30tr');
+        } else if (VeSo.getNumber4() === VeHeThong.getNumber4() &&
+            VeSo.getNumber5() === VeHeThong.getNumber5() &&
+            VeSo.getNumber6() === VeHeThong.getNumber6()) {
+            alert('Chức mừng bạn đã trúng giải khuyến khích trị giá 5tr');
+        } else {
+            alert('Chúc bạn may mắn lần sau');
+        }
+
+        console.log(VeSo.getNumber1());
+        console.log(VeSo.getNumber2());
+        console.log(VeSo.getNumber3());
+        console.log(VeSo.getNumber4());
+        console.log(VeSo.getNumber5());
+        console.log(VeSo.getNumber6());
+    }
+
+
+
+    class ticket {
+        constructor(number1, number2, number3, number4, number5, number6) {
+            this.number1 = number1;
+            this.number2 = number2;
+            this.number3 = number3;
+            this.number4 = number4;
+            this.number5 = number5;
+            this.number6 = number6;
+        }
+
+        getNumber1() {
+            return this.number1;
+        }
+
+        setNumber1(value) {
+            this.number1 = value;
+        }
+
+        getNumber2() {
+            return this.number2;
+        }
+
+        setNumber2(value) {
+            this.number2 = value;
+        }
+
+        getNumber3() {
+            return this.number3;
+        }
+
+        setNumber3(value) {
+            this.number3 = value;
+        }
+
+        getNumber4() {
+            return this.number4;
+        }
+
+        setNumber4(value) {
+            this.number4 = value;
+        }
+
+        getNumber5() {
+            return this.number5;
+        }
+
+        setNumber5(value) {
+            this.number5 = value;
+        }
+
+        getNumber6() {
+            return this.number6;
+        }
+
+        setNumber6(value) {
+            this.number6 = value;
+        }
+    }
+    let VeHeThong = new ticket(Math.round(Math.random()*99),Math.round(Math.random()*99),Math.round(Math.random()*99),Math.round(Math.random()*99),Math.round(Math.random()*99),Math.round(Math.random()*99))
+    console.log(VeHeThong.getNumber1());
+    console.log(VeHeThong.getNumber2());
+    console.log(VeHeThong.getNumber3());
+    console.log(VeHeThong.getNumber4());
+    console.log(VeHeThong.getNumber5());
+    console.log(VeHeThong.getNumber6())
+</script>
 </body>
 </html>
